@@ -1,0 +1,440 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="co.udistrital.android.thomasmensageria.description_route.DescriptionRouteFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_guide"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/guia" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textInputLayout">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="@string/get.route.title.guide"
+                    android:ems="8"
+                    android:text="123456789"
+                    android:enabled="false"
+                    android:textStyle="bold"
+                    android:id="@+id/editTxtGuia" />
+
+            </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/imgDate"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/date" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDate">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/deltails.body.route.description.date"
+                        android:ems="12"
+                        android:enabled="false"
+                        android:text="24/09/2018"
+                        android:textStyle="bold"
+                        android:id="@+id/editTxtDate" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_product"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/producto" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNameProduct">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/deltails.body.route.description.name.product"
+                        android:ems="9"
+                        android:enabled="false"
+                        android:text="Tarjeta de credito"
+                        android:id="@+id/editTxtProduct" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <ImageView
+                    android:id="@+id/imgQuantity"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/cantidad" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtQuantity">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/deltails.body.route.description.quantity"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:text="2"
+                        android:id="@+id/editTxtCant" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_name"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/cliente" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textMultiLine"
+                        android:hint="@string/deltails.body.route.description.name.client"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:id="@+id/editTxtClient" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_origin"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ciudad" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/deltails.body.route.description.origin"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:id="@+id/editTxtOrigin" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDestiny"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_destiny"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/destiny" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textMultiLine"
+                        android:hint="@string/deltails.body.route.description.destiny"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:id="@+id/editTxtDestiny" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/llObservation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_observation"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/barrio" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textMultiLine"
+                        android:hint="@string/deltails.body.route.description.observation"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:text="Bati Cueva"
+                        android:id="@+id/editTxtObservation" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_state"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/state" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/deltails.body.route.description.state"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:text="En proceso de entrega"
+                        android:id="@+id/editTxtState" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_delivery"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/date" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/deltails.body.route.description.date.delivery"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:id="@+id/editTxtDelivery" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_typeService"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/service" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/deltails.body.route.description.service"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:text="CREDITO EN DESTINO"
+                        android:id="@+id/editTxtService" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/llTelephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_telephone"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/telefono" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/deltails.body.route.description.phone"
+                        android:ems="10"
+                        android:editable="false"
+                        android:text="5702000"
+                        android:id="@+id/editTxtTelephone" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_mail"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/mail" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailSubject"
+                        android:hint="@string/deltails.body.route.description.mail"
+                        android:text="Correo@udistrital.gov.co"
+                        android:id="@+id/editTxtEmain" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutButtons"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</ScrollView>

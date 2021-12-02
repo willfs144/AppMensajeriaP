@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Mensageria</string>
+    <string name="login.message.mail">Usuario</string>
+    <string name="login.message.password">Contraseña</string>
+    <string name="login.button.signin">Iniciar sesión</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="login.error.message.signin">Imposible iniciar sesion %s</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="contactlist.menu.action.signoff">Cerrar sesión</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="main_profile_update_notice">Error al cargar los datos %s</string>capturar
+
+    <string name="menu.icon.main">Inicio</string>
+    <string name="menu.icon.get.route">Obtener ruta</string>
+    <string name="menu.icon.services.route">Ruta servicios</string>
+    <string name="menu.icon.summary.route">Resumen ruta</string>
+    <string name="menu.icon.close.route">Cierre ruta</string>
+
+    <string name="menu.deltail.route">Detalles de ruta</string>
+
+    <string name="title_activity_get_route">Obtener ruta</string>
+    <string name="get.route.title.numeral">#</string>
+    <string name="get.route.title.guide">GUÍA</string>
+    <string name="get.route.title.deliver.date">FECHA ENTREGA</string>
+
+
+    <string name="add.route.message.sub.title">No. Guía</string>
+    <string name="add.route.message.title">Agregar ruta</string>
+    <string name="add.route.message.approbation">Clave de autorización </string>
+    <string name="add.route.message.add">Aceptar</string>
+    <string name="add.route.message.cancel">Cancelar</string>
+    <string name="add.route.message.route.added">Ruta agregada exitosamente</string>
+    <string name="add.route.message.route.validate">Ruta validada exitosamente</string>
+    <string name="add.route.error.message">Imposible agregar ruta no existe</string>
+
+    <string name="delete.route.message.title">Eliminar ruta</string>
+    <string name="delete.route.message.deleted">Ruta eliminada exitosamente</string>
+    <string name="route.message.observation">Digite novedad</string>
+
+
+    <string name="deltails.header.description.title">Detalles de ruta</string>
+    <string name="deltails.header.route.detail.title">Descripción</string>
+    <string name="deltails.header.route.map.title">Mapa</string>
+
+    <string name="deltails.body.route.map.error.location.null">Imposible obtener ubicacion </string>
+    <string name="deltails.body.route.description.guide">Guía </string>
+    <string name="deltails.body.route.description.date">Fecha entrega </string>
+    <string name="deltails.body.route.description.name.client">Cliente </string>
+    <string name="deltails.body.route.description.name.product">Producto </string>
+    <string name="deltails.body.route.description.quantity">Cantidad </string>
+    <string name="deltails.body.route.description.address">Dirección </string>
+    <string name="deltails.body.route.description.destiny">Destino</string>
+    <string name="deltails.body.route.description.zone">Barrio </string>
+    <string name="deltails.body.route.description.observation">Observación Remisión </string>
+    <string name="deltails.body.route.description.state">Estado del producto</string>
+    <string name="deltails.body.route.description.date.delivery">Fecha de envio</string>
+    <string name="deltails.body.route.description.service">Tipo de servicio </string>
+    <string name="deltails.body.route.description.origin">Origen </string>
+    <string name="deltails.body.route.description.mail">Correo </string>
+    <string name="deltails.body.route.description.phone">Teléfono </string>
+    <string name="deltails.body.route.description.cedula">Escanear cedula </string>
+
+    <string name="validate.cc.message.sub.title">Cedula</string>
+    <string name="validate.cc.message.scan.bar">Codigo de barras no legible</string>
+    <string name="validate.cc.message.title">Validar Cedula</string>
+
+    <string name="addphoto.title.list">Fotos entrega</string>
+    <string name="addphoto.notice.upload.init">Fotografía en proceso de carga</string>
+    <string name="addphoto.notice.upload.complete">Fotografía cargada exitosamente</string>
+    <string name="addphoto.error.dispath.camera">Error al crear archivo</string>
+    <string name="addphoto.message.picture.source">Selecciona una foto</string>
+
+    <string name="returned.route.message.title">No entregado por: </string>
+
+    <string name="summary.route.message.effective">Servicios efectivos:  </string>
+    <string name="summary.route.message.failed">Servicios fallidos:  </string>
+    <string name="summary.route.message.slopes">Servicios pendientes:  </string>
+    <string name="summary.route.message.recaptures">Total recaurdo:  </string>
+    <string name="summary.route.message.services">Total servicios asignados:  </string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

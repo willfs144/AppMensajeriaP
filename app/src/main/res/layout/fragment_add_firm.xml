@@ -1,0 +1,88 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="70dp"
+    android:id="@+id/container_firm"
+    tools:context="co.udistrital.android.thomasmensageria.add_firm.AddFirmFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+       <LinearLayout
+            android:id="@+id/img_firm"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:padding="1dp"
+            android:orientation="vertical"
+            android:layout_margin="50dp">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textAlignment="center"
+               android:text="Firma de quien recibe: "
+               android:textStyle="bold"
+               android:layout_margin="10dp"/>
+
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:padding="1dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivfirma"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llbuttomFirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_below="@+id/img_firm">
+
+            <Button
+                android:id="@+id/btnlimpiar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fragment_padding_normal"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:tint="@android:color/white"
+                android:text="Limpiar" />
+
+            <Button
+                android:id="@+id/btnguardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fragment_padding_normal"
+                android:text="Guardar"
+                android:backgroundTint="@color/colorAccent"
+                android:tint="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnSiguente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fragment_padding_normal"
+                android:visibility="gone"
+                android:text="Siguiente"
+                android:backgroundTint="@color/colorAccent"
+                android:tint="@android:color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

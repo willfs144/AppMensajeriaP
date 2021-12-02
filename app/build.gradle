@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "co.udistrital.android.thomasmensageria"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string", "CLOUDINARY_URL", project.property('CLOUDINARY_URL')
+            resValue("string", "GOOGLE_MAPS_API_KEY", project.property('GOOGLE_MAPS_API_KEY'))
+        }
+        debug {
+            resValue "string", "CLOUDINARY_URL", project.property('CLOUDINARY_URL')
+            resValue("string", "GOOGLE_MAPS_API_KEY", project.property('GOOGLE_MAPS_API_KEY'))
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:25.4.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    implementation "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.ext.supportLibraryVersion"
+    implementation "de.hdodenhof:circleimageview:$rootProject.ext.circleImageVersion"
+    implementation "me.dm7.barcodescanner:zxing:$rootProject.ext.barcodescannerVersion"
+    compile 'com.journeyapps:zxing-android-embedded:3.6.0'
+    implementation "com.google.firebase:firebase-database:$rootProject.ext.firebaseClientVersion"
+    implementation "com.google.firebase:firebase-auth:$rootProject.ext.firebaseClientVersion"
+
+    implementation "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
+    implementation "org.greenrobot:eventbus:$rootProject.ext.eventbusVersion"
+    implementation "com.google.code.ksoap2-android:ksoap2-android:$rootProject.ext.ksoap2Version"
+
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.5.3'
+    implementation "javax.annotation:jsr250-api:$rootProject.ext.jsr250Version"
+
+
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+
+    implementation 'com.android.support:support-annotations:27.1.0'
+    implementation 'com.android.support:cardview-v7:23.3.+'
+    implementation 'com.google.android.gms:play-services-maps:10.2.6'
+    implementation 'com.google.android.gms:play-services-location:10.2.6'
+    implementation 'com.google.android.gms:play-services-places:10.2.6'
+
+    implementation 'com.google.dagger:dagger-android:2.15'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.11'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+
+    implementation "com.cloudinary:cloudinary-android:$rootProject.ext.cloudinaryVersion"
+
+    implementation 'com.itextpdf:itextg:5.5.10'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    implementation 'com.android.volley:volley:1.1.1'
+    //implementation 'com.google.code.gson:gson:2.8.6'
+
+
+}
+apply plugin: 'com.google.gms.google-services'
+

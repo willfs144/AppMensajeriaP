@@ -1,0 +1,470 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_deliver"
+    android:layout_marginTop="55dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="co.udistrital.android.thomasmensageria.services_deliver.ServicesDeliverFragment">
+
+
+        <LinearLayout
+            android:id="@+id/llForms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_guide"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/guia" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textInputLayout">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/get.route.title.guide"
+                        android:ems="8"
+                        android:enabled="false"
+                        android:textStyle="bold"
+                        android:id="@+id/editTxtGuia" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/imgDate"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/date" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDate">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/deltails.body.route.description.date"
+                        android:ems="12"
+                        android:enabled="false"
+                        android:textStyle="bold"
+                        android:id="@+id/editTxtDate" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_product"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/producto" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNameProduct">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/deltails.body.route.description.name.product"
+                        android:ems="9"
+                        android:enabled="false"
+                        android:id="@+id/editTxtProduct" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <ImageView
+                    android:id="@+id/imgQuantity"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/cantidad" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtQuantity">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/deltails.body.route.description.quantity"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:id="@+id/editTxtCant" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_name"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/cliente" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textMultiLine"
+                        android:hint="@string/deltails.body.route.description.name.client"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:id="@+id/editTxtClient" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_typeService"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/service" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/deltails.body.route.description.service"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:id="@+id/editTxtService" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llClient2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_name2"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/buscar_cliente" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textMultiLine"
+                        android:hint="Cedula"
+                        android:text="Escanear Cedula"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:id="@+id/editTxtClientValidate" />
+
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <ImageView
+                    android:id="@+id/validateIVCC"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/bar" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llDatosName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textInputLayout1">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="Primer nombre"
+                        android:ems="7"
+                        android:id="@+id/name1" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtName">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="Segundo nombre"
+                        android:ems="12"
+                        android:id="@+id/name2" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDatosLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textInputLayout2">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="Primer apellido"
+                        android:ems="7"
+                        android:id="@+id/lastName1" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtLastName">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="Segundo apellido"
+                        android:ems="12"
+                        android:id="@+id/lastName2" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/llFormbuttomCc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right">
+
+                    <Switch
+                        android:id="@+id/switchCedula"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textSwitch"
+                        android:layout_width="wrap_content"
+                        android:text="Agregar Cedula "
+                        android:layout_height="wrap_content" />
+
+
+                <Button
+                    android:id="@+id/bValidarCC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fragment_padding_normal"
+                    android:visibility="gone"
+                    android:text="Validar"
+                    android:backgroundTint="@color/colorAccent"
+                    android:tint="@android:color/white" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llRecaudo"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_recaudo"
+                    android:layout_width="@dimen/icon_form_size"
+                    android:layout_height="@dimen/icon_form_size"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/recaudo" />
+
+                <TextView
+                    android:id="@+id/tvRecuado"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="10"
+                    android:text=" Valor recaudo:"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/vRecuado"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ems="10"
+                    android:text="2000 "
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llFormbuttomRecaudo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:gravity="right">
+
+                <Switch
+                    android:id="@+id/switchRecaudo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvsRecuado"
+                    android:layout_width="wrap_content"
+                    android:text="Realizo recaudo "
+                    android:layout_height="wrap_content" />
+
+
+                <Button
+                    android:id="@+id/bsRecaudo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fragment_padding_normal"
+                    android:visibility="gone"
+                    android:text="Validar"
+                    android:backgroundTint="@color/colorAccent"
+                    android:tint="@android:color/white" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llbuttomCc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                    <Button
+                        android:id="@+id/bAtras"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/fragment_padding_normal"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:tint="@android:color/white"
+                        android:text="Atras" />
+
+                    <Button
+                        android:id="@+id/bSiguiente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/fragment_padding_normal"
+                        android:text="Siguiente"
+                        android:backgroundTint="@color/colorAccent"
+                        android:tint="@android:color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarDeliver"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
+
+
